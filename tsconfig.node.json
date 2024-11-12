@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+    "target": "ES2022",
+    "lib": ["ES2023"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "Bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+
+    // Vue関連設定追加
+    "jsx": "preserve", // JSXをVueで使う場合に必要
+    "types": ["vite/client", "node"], // vite と node の型を追加
+    "esModuleInterop": true, // モジュールのインポート互換性を持たせる
+    "allowJs": true // JavaScriptファイルも扱えるようにする
+  },
+
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue", // .vueファイルも含める
+    "vite.config.ts"
+  ],
+  "exclude": ["node_modules", "dist"]
+}
